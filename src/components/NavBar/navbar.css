@@ -19,8 +19,12 @@
 }
 
 .desktopMenuListItem{
-    margin: 1rem;
+    margin: 2rem;
     cursor: pointer;
+    background-color: #EBE6E6;
+    color: #212122;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
 }
 
 .desktopMenuBtn{
@@ -32,6 +36,11 @@
     justify-content: center;
     padding: 0 1rem;
     border-radius: 2rem;
+}
+
+.desktopMenuListItem:hover{
+    background-color: #F0BF03;
+    
 }
 
 .desktopMenuImg{
