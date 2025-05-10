@@ -7,7 +7,8 @@ const Intro = () => {
   return (
     <section id="intro">
         <div className="introContent">
-            <span className="IntroJRM">JRM<span className="IntroSystem">System</span></span>
+            <span className="IntroJRM">JRM<span className="IntroSystem">System</span></span> 
+            <br />
             <span className="introText">Excelência em Soluções de Segurança Eletrônica.</span>
             <Link><button className="Conhecer">Conhecer</button></Link>
         </div>
