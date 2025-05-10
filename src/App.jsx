@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Navbar from './components/NavBar/navbar';
+import Intro from './components/Intro/intro';
 
 
 
@@ -9,6 +10,7 @@ function App() {
     <>
       <div>
             <Navbar/>
+            <Intro/>
       </div>
 
     </>
