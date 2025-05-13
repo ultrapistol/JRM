@@ -61,3 +61,62 @@
 .Conhecer:hover{
     background-color: #EBE6E6;
 }
+
+@media (max-width: 768px) {
+    .introContent {
+        font-size: 2rem;
+        margin-top: 6rem;
+    }
+
+    .introText {
+        font-size: 1.5rem;
+        margin: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .Conhecer {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+     .bg {
+        top: 0;                  /* remove deslocamento no mobile */
+        width: auto;             /* deixa a largura se ajustar sozinha */
+        min-width: 100vw;        /* garante que cubra horizontalmente */
+        height: 100vh;           /* garante que cubra verticalmente */
+        object-fit: cover;       /* cobre toda a tela com possível corte lateral */
+    }
+}
+
+
+@media (max-width: 480px) {
+    .introContent {
+        font-size: 1.6rem;
+        margin-top: 5rem;
+        align-items: center; 
+        flex-direction: column;
+    }
+
+    .introText {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        justify-content: center;   
+        align-items: center; 
+        flex-direction: column;
+    }
+
+    .Conhecer {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+    .bg {
+        top: 0;                  /* remove deslocamento no mobile */
+        width: auto;             /* deixa a largura se ajustar sozinha */
+        min-width: 100vw;        /* garante que cubra horizontalmente */
+        height: 100vh;           /* garante que cubra verticalmente */
+        object-fit: cover;       /* cobre toda a tela com possível corte lateral */
+        width: 100vw;
+
+    }
+}
