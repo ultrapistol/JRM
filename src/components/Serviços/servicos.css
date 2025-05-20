@@ -1,5 +1,5 @@
 #servicos {
-  height: calc(100vw - 5rem);
+  height: calc(58vw - 5rem);
   margin: 0 auto;
   overflow: hidden;
   position: relative;
@@ -99,4 +99,48 @@
     height: 100vh;
     opacity: 14%;
 
+}
+
+@media (max-width: 1024px) {
+  .servicoCard {
+    width: 200px;
+    height: 300px;
+    margin: 0 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ServicosTitle {
+    font-size: 1.5rem;
+  }
+
+  .ServicosDesc {
+    font-size: 1rem;
+  }
+
+  .servicoCard {
+    width: 180px;
+    height: 280px;
+    margin: 0 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ServicosBar {
+    padding: 0 1rem;
+  }
+
+  .servicoCard {
+    width: 160px;
+    height: 260px;
+    margin: 0 0.5rem;
+  }
+
+  .ServicosTitle {
+    font-size: 1.3rem;
+  }
+
+  .ServicosDesc {
+    font-size: 0.9rem;
+  }
 }
