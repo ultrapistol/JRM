@@ -1,0 +1,53 @@
+.sobre {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.SobreTitle {
+  font-size: 2rem;
+  color: #F0BF03;
+  padding-bottom: 2rem;
+  text-align: center !important;
+}
+
+.sobreContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  gap: 2rem;
+}
+
+.SobreText {
+  font-size: 1.2rem;
+  flex: 1;
+  max-width: 50%;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.infoBox {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-color: #f5f5f5;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.BoxTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #F0BF03;
+}
+
+.infoContent {
+  font-size: 1rem;
+  color: #333;
+}
