@@ -1,8 +1,52 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './sobre.css';
 import missao from '../../assets/missao.png';
 import visao from '../../assets/visao.png';
 import valores from '../../assets/valores.png';
+
+const AnimatedNumber = ({ target }) => {
+  const [count, setCount] = useState(0);
+  const ref = useRef();
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated.current) {
+          hasAnimated.current = true;
+          let start = 0;
+          const duration = 1500;
+          const increment = target / (duration / 16);
+
+          const animate = () => {
+            start += increment;
+            if (start < target) {
+              setCount(Math.ceil(start));
+              requestAnimationFrame(animate);
+            } else {
+              setCount(target);
+            }
+          };
+
+          animate();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [target]);
+
+  return <span ref={ref}>{count}</span>;
+};
 
 const Sobre = () => {
   return (
@@ -50,9 +94,28 @@ const Sobre = () => {
     </div>
   </div>
 </div>
-</section>
-    
-  )
-}
+<br />
+
+      <div className="InfoComplementar">
+        <h4 className="ProjetosRealizados">
+          <span className="NumberProjetos"><AnimatedNumber target={2300} /><br /></span> Projetos Realizados
+        </h4>
+
+        <h4 className="AnosHistoria">
+          <span className="NumberAnos"><AnimatedNumber target={7} /><br /></span> Anos de História
+        </h4>
+
+        <h4 className="ClientesAtendidos">
+          <span className="NumberClientes"><AnimatedNumber target={1200} /><br /></span> Clientes Atendidos
+        </h4>
+
+        <h4 className="PremiosCertificacoes">
+          <span className="NumberPremios"><AnimatedNumber target={15} /><br /></span> Prêmios e Certificações
+        </h4>
+
+      </div>
+    </section>
+  );
+};
 
 export default Sobre;

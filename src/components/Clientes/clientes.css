@@ -1,0 +1,55 @@
+.clientes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ClientesTitle{
+    color: #F0BF03;
+}
+
+.ClientesSubtitle{
+    padding: 1rem;
+    font-size: 18px;
+}
+
+.ClientesCards{
+    width: 100%;
+    display: flex;
+    margin: 2rem;
+    padding-left: 2rem;
+}
+
+.ClienteContent{
+    width: 40%;
+    margin: 3rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-color: #f5f5f5;
+    border-radius: 12%;
+    border: 1.5px solid;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.ClienteContent:hover{
+    transform: scale(1.05);
+}
+
+.NomeCliente{
+    padding: 1rem;
+}
+
+.CommentCliente{
+    padding: 0 1rem;
+}
+
+.estrelas{
+    height: 5rem;
+    width: 5rem;
+    margin-top: 0.6rem;
+    display: flex;
+    align-self:center;
+
+}
