@@ -4,6 +4,7 @@ import Intro from './components/Intro/intro';
 import Servicos from './components/Serviços/servicos';
 import Sobre from './components/Sobre/sobre';
 import Clientes from './components/Clientes/clientes';
+import Contato from './components/Contato/contato';
 
 
 
@@ -17,6 +18,7 @@ function App() {
             <Servicos/>
             <Sobre/>
             <Clientes/>
+            <Contato/>
       </div>
 
     </>

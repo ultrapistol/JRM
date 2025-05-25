@@ -1,0 +1,43 @@
+.contato{
+    align-items: center;
+    text-align: center;
+}
+
+.ContatoTitle{
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.ContatoSubtitle{
+    font-size: 18px;
+    max-width: 50%;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.atendimentoIndividual{
+    display: flex;
+    align-items: center; 
+}
+
+.atendimento{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    margin: 3rem;
+    justify-content: center;
+}
+
+.AtendimentoImg{
+    height: 4.4rem;
+    width: 4.4rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+.AtendimentoText{
+    text-align: left;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
