@@ -30,9 +30,42 @@ const Contato = () => {
 
         </div>
 
-        <div className="ContatoInfo">
 
-        </div>
+        <div className="ContatoContainer">
+        
+            <div className="ContatoInfo">
+
+                <div className="ContatoSubdivision">
+                    <h1 className="ContatoInfoTitle">ENDEREÇO</h1>
+                    <h2 className="ContatoInfo">Rua: Padre Adelino, 2074 12º Andar Conj.121 <br />
+                    Tatuapé - São Paulo / SP - CEP: 03303-000
+                    </h2>
+                </div>
+
+                <div className="ContatoSubdivision">
+                    <h1 className="ContatoInfoTitle">TELEFONES</h1>
+                    <h2 className="ContatoInfo">Tel: (11) 4130-7887 <br /> WhatsApp: (11) 99175-634
+                    </h2>
+                </div>
+
+                <div className="ContatoSubdivision">
+                    <h1 className="ContatoInfoTitle">EMAIL</h1>
+                    <h2 className="ContatoInfo"> jrmsystem@jrmsystem.com.br</h2>
+                </div>
+
+            </div>
+
+            <form className="ContactForm">
+                <input type="text" className="name" placeholder='Digite Seu Nome ou Instituição.'/>
+                <input type="email" className="email" placeholder='Digite seu Email.'/>
+                <textarea className='msg' name="message" rows={5} placeholder='Sua mensagem.'></textarea>
+                <button type='submit' value='Send' className="SubmitBtn">Enviar</button>
+                {/* <img src={} alt="" className="link" /> */}
+                {/* <img src={} alt="" className="link" />
+                <img src={} alt="" className="link" /> */}
+            </form>
+
+        </div>  
 
     </section>
   )
