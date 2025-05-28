@@ -102,3 +102,19 @@
     background-color: #F0BF03;
 }
 
+
+.links{
+    align-items: center;
+}
+
+.linkFace, .linkInsta{
+    height: 3rem;
+    width: 3.2rem;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+
+.linkYoutube{
+    height: 3rem;
+    width: 3.6rem;
+}

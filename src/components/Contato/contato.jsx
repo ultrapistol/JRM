@@ -3,6 +3,10 @@ import './contato.css';
 import assistencia from '../../assets/assistencia.png';
 import suporte from '../../assets/suporte.png';
 import solucao from '../../assets/solucao.png';
+import facebook from '../../assets/facebook.png';
+import instagram from '../../assets/instagram.png';
+import youtube from '../../assets/youtube.png';
+
 
 const Contato = () => {
   return (
@@ -60,12 +64,16 @@ const Contato = () => {
                 <input type="email" className="email" placeholder='Digite seu Email.'/>
                 <textarea className='msg' name="message" rows={5} placeholder='Sua mensagem.'></textarea>
                 <button type='submit' value='Send' className="SubmitBtn">Enviar</button>
-                {/* <img src={} alt="" className="link" /> */}
-                {/* <img src={} alt="" className="link" />
-                <img src={} alt="" className="link" /> */}
             </form>
+                
+        </div> 
 
-        </div>  
+        <div className="links">
+            <img src={facebook} alt="Facebook" className="linkFace" /> 
+            <img src={instagram} alt="Instagram" className="linkInsta" />
+            <img src={youtube} alt="Youtube" className="linkYoutube" />
+        </div>
+ 
 
     </section>
   )

@@ -5,6 +5,7 @@ import Servicos from './components/Serviços/servicos';
 import Sobre from './components/Sobre/sobre';
 import Clientes from './components/Clientes/clientes';
 import Contato from './components/Contato/contato';
+import Footer from './components/Footer/footer';
 
 
 
@@ -19,6 +20,7 @@ function App() {
             <Sobre/>
             <Clientes/>
             <Contato/>
+            <Footer/>
       </div>
 
     </>
