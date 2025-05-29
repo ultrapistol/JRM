@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import emailjs from '@emailjs/browser';
 import './contato.css';
 import assistencia from '../../assets/assistencia.png';
 import suporte from '../../assets/suporte.png';
@@ -8,9 +9,28 @@ import instagram from '../../assets/instagram.png';
 import youtube from '../../assets/youtube.png';
 
 
+
 const Contato = () => {
+      const form = useRef();
+        const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_ns1ea4s', 'template_6eate4f', form.current, {
+        publicKey: 'LEf89_H5kWf74KrXXjEzq',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+  
   return (
-    <section className="contato">
+    <section className="contato" id='contato'>
         <h1 className="ContatoTitle">Fale com a Gente!</h1>
         <span className="ContatoSubtitle">Precisa de um orçamento, quer tirar dúvidas ou agendar uma visita técnica?
              Nossa equipe está pronta para te atender com agilidade e atenção.
@@ -59,9 +79,9 @@ const Contato = () => {
 
             </div>
 
-            <form className="ContactForm">
-                <input type="text" className="name" placeholder='Digite Seu Nome ou Instituição.'/>
-                <input type="email" className="email" placeholder='Digite seu Email.'/>
+            <form className="ContactForm" ref={form} onSubmit={sendEmail}>
+                <input type="text" className="name" placeholder='Digite Seu Nome ou Instituição.' name='your_name'/>
+                <input type="email" className="email" placeholder='Digite seu Email.' name='your_email'/>
                 <textarea className='msg' name="message" rows={5} placeholder='Sua mensagem.'></textarea>
                 <button type='submit' value='Send' className="SubmitBtn">Enviar</button>
             </form>
